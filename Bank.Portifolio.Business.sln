@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Service", "0-Service", "{5995F73E-2125-49FC-BEF3-BF23F0CC71BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Application", "1-Application", "{22AE2B2E-459D-4AAA-AF27-5ABCFB574D9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{399A3D24-8F37-4D76-BD7D-DEC466BFCA70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{EB7F0D7A-1753-4C98-B90B-3AB412A63746}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{84812AC7-7758-4E60-801D-F4E32ED3EF06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3-Ioc", "4.3-Ioc", "{75A6517B-071C-467A-8888-134467228837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{D3577836-245B-4BDA-B0D7-6359233B06B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Portifolio.Business.Application", "src\Bank.Portifolio.Business.Application\Bank.Portifolio.Business.Application.csproj", "{47F3C4F2-C776-4C0B-AC51-E36D9BB4C1D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Portifolio.Bussines.Domain", "src\Bank.Portifolio.Bussines.Domain\Bank.Portifolio.Bussines.Domain.csproj", "{EDB99149-F8B4-48FA-8960-73C8E2CA2BE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Portifolio.Business.Infra.Data", "src\Bank.Portifolio.Business.Infra.Data\Bank.Portifolio.Business.Infra.Data.csproj", "{EC1EE4BE-2E4A-4F8A-9EE1-E6D6DB84FACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Portifolio.Business.Presenter", "src\Bank.Portifolio.Business.Presenter\Bank.Portifolio.Business.Presenter.csproj", "{037ADC74-9DB2-4F9D-90F6-CBEB0F5E55F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Portifolio.Business.Ioc", "Bank.Portifolio.Business.Ioc\Bank.Portifolio.Business.Ioc.csproj", "{045E1277-E179-4E32-A566-7D60EC4E5E47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47F3C4F2-C776-4C0B-AC51-E36D9BB4C1D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F3C4F2-C776-4C0B-AC51-E36D9BB4C1D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F3C4F2-C776-4C0B-AC51-E36D9BB4C1D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F3C4F2-C776-4C0B-AC51-E36D9BB4C1D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB99149-F8B4-48FA-8960-73C8E2CA2BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB99149-F8B4-48FA-8960-73C8E2CA2BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB99149-F8B4-48FA-8960-73C8E2CA2BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB99149-F8B4-48FA-8960-73C8E2CA2BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC1EE4BE-2E4A-4F8A-9EE1-E6D6DB84FACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC1EE4BE-2E4A-4F8A-9EE1-E6D6DB84FACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC1EE4BE-2E4A-4F8A-9EE1-E6D6DB84FACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC1EE4BE-2E4A-4F8A-9EE1-E6D6DB84FACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037ADC74-9DB2-4F9D-90F6-CBEB0F5E55F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037ADC74-9DB2-4F9D-90F6-CBEB0F5E55F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037ADC74-9DB2-4F9D-90F6-CBEB0F5E55F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037ADC74-9DB2-4F9D-90F6-CBEB0F5E55F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{045E1277-E179-4E32-A566-7D60EC4E5E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045E1277-E179-4E32-A566-7D60EC4E5E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045E1277-E179-4E32-A566-7D60EC4E5E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045E1277-E179-4E32-A566-7D60EC4E5E47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{84812AC7-7758-4E60-801D-F4E32ED3EF06} = {EB7F0D7A-1753-4C98-B90B-3AB412A63746}
+		{75A6517B-071C-467A-8888-134467228837} = {EB7F0D7A-1753-4C98-B90B-3AB412A63746}
+		{D3577836-245B-4BDA-B0D7-6359233B06B6} = {EB7F0D7A-1753-4C98-B90B-3AB412A63746}
+		{47F3C4F2-C776-4C0B-AC51-E36D9BB4C1D7} = {22AE2B2E-459D-4AAA-AF27-5ABCFB574D9E}
+		{EDB99149-F8B4-48FA-8960-73C8E2CA2BE5} = {399A3D24-8F37-4D76-BD7D-DEC466BFCA70}
+		{EC1EE4BE-2E4A-4F8A-9EE1-E6D6DB84FACC} = {84812AC7-7758-4E60-801D-F4E32ED3EF06}
+		{037ADC74-9DB2-4F9D-90F6-CBEB0F5E55F6} = {5995F73E-2125-49FC-BEF3-BF23F0CC71BE}
+		{045E1277-E179-4E32-A566-7D60EC4E5E47} = {75A6517B-071C-467A-8888-134467228837}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF864308-7196-4F47-B5C1-5F18E2C9D514}
+	EndGlobalSection
+EndGlobal
