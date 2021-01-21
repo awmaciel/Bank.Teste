@@ -2,9 +2,9 @@
 {
     public class TradeCategories
     {
-        public int NameClient { get; set; }
-        public int ClientSector { get; set; }
-        public int ValueBusiness { get; set; }
-        public int NameCategory { get; set; }
+        public string NameClient { get; set; }
+        public string ClientSector { get; set; }
+        public decimal ValueBusiness { get; set; }
+        public string NameCategory { get; set; }
     }
 }

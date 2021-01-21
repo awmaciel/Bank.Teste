@@ -22,8 +22,8 @@ namespace Bank.Portifolio.Business.Infra.Data.Repository
         }
 
         public IEnumerable<TEntity> GetAll()
-        {
-            return Db.Set<TEntity>().ToList();
+        {  
+            return Db.Set<TEntity>();
         }
 
         public void Update(TEntity obj)
@@ -40,7 +40,7 @@ namespace Bank.Portifolio.Business.Infra.Data.Repository
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

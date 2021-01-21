@@ -53,5 +53,19 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Bank.Portifolio.Business.Application\Bank.Portifolio.Business.Application.csproj">
+      <Project>{47f3c4f2-c776-4c0b-ac51-e36d9bb4c1d7}</Project>
+      <Name>Bank.Portifolio.Business.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\src\Bank.Portifolio.Business.Infra.Data\Bank.Portifolio.Business.Infra.Data.csproj">
+      <Project>{ec1ee4be-2e4a-4f8a-9ee1-e6d6db84facc}</Project>
+      <Name>Bank.Portifolio.Business.Infra.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\src\Bank.Portifolio.Bussines.Domain\Bank.Portifolio.Bussines.Domain.csproj">
+      <Project>{edb99149-f8b4-48fa-8960-73c8e2ca2be5}</Project>
+      <Name>Bank.Portifolio.Bussines.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

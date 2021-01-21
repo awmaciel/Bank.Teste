@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Bank.Portifolio.Bussines.Domain.Dto.TradeCategories>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameClient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientSector)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValueBusiness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameCategory)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameClient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientSector)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValueBusiness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameCategory)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

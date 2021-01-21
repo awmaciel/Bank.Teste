@@ -8,22 +8,24 @@ namespace Bank.Portifolio.Business.Infra.Data.EntityConfig
         {
             HasKey(c => c.IdBusiness);
 
-            Property(c => c.IdCategory).IsRequired();
+            Property(c => c.IdCategory);
 
-            Property(c => c.IdClient).IsRequired();
+            Property(c => c.IdClient);
 
-            Property(c => c.IdPortifolio).IsRequired();
+            Property(c => c.IdPortifolio);
 
-            Property(c => c.TypeBusiness).IsRequired();
+            Property(c => c.TypeBusiness);
+
+            Property(c => c.ValueBusiness);
 
             Property(c => c.DateRegister).IsRequired();
 
             Property(c => c.DateUpdate);
 
 
-            HasRequired(p => p.CategoryBusiness).WithMany().HasForeignKey(p => p.IdCategory);
-            HasRequired(p => p.ClientBusiness).WithMany().HasForeignKey(p => p.IdClient);
-            HasRequired(p => p.PortifolioBusiness).WithMany().HasForeignKey(p => p.IdPortifolio);
+            HasRequired(p => p.Category).WithMany().HasForeignKey(p => p.IdCategory);
+            HasRequired(p => p.Client).WithMany().HasForeignKey(p => p.IdClient);
+            HasRequired(p => p.Portifolio).WithMany().HasForeignKey(p => p.IdPortifolio);
         }
     }
 }

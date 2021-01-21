@@ -10,7 +10,7 @@ namespace Bank.Portifolio.Business.Presenter.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+           return RedirectToAction("../Business/Index");
         }
 
         public ActionResult About()

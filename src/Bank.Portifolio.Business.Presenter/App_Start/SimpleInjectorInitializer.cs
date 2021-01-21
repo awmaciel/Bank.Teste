@@ -1,10 +1,12 @@
 ﻿using Bank.Portifolio.Business.Ioc;
+using Bank.Portifolio.Business.Presenter.App_Start;
 using SimpleInjector;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
 using System.Reflection;
 using System.Web.Mvc;
 
+[assembly: WebActivator.PostApplicationStartMethod(typeof(SimpleInjectorInitializer), "Initialize")]
 namespace Bank.Portifolio.Business.Presenter.App_Start
 {
     public class SimpleInjectorInitializer

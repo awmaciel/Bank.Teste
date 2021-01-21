@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Bank.Portifolio.Business.Application.ViewModels.ClientViewModel>
+
+<div>
+    <h4>Client Bank</h4>
+    <hr />
+</div>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Clients</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Clientes Especiais", "Especiais")
+</p>
+<table class="table">
+    <tr>        
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameClient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SectorClient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneClient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CellClient)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IdClient }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdClient }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdClient })
+            </td>
+        </tr>
+    }
+
+</table>

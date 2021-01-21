@@ -1,9 +1,10 @@
-﻿using SimpleInjector;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Bank.Portifolio.Business.Application;
+using Bank.Portifolio.Business.Application.Interfaces;
+using Bank.Portifolio.Business.Infra.Data.Repository;
+using Bank.Portifolio.Bussines.Domain.Interfaces;
+using Bank.Portifolio.Bussines.Domain.Interfaces.Services;
+using Bank.Portifolio.Bussines.Domain.Services;
+using SimpleInjector;
 
 namespace Bank.Portifolio.Business.Ioc
 {
@@ -15,22 +16,20 @@ namespace Bank.Portifolio.Business.Ioc
             // Lifestyle.Singleton => Uma instancia unica para a classe
             // Lifestyle.Scoped => Uma instancia unica para o request
 
-            // App
-            //container.Register<IClienteAppService, ClienteAppService>(Lifestyle.Scoped);
+            // Repository
+            container.Register<IClienteAppService, ClientAppService>(Lifestyle.Scoped);
+            container.Register<IClientRepository, ClientRepository>(Lifestyle.Scoped);
+            container.Register<IBusinessRepository, BusinessRepository>(Lifestyle.Scoped);
+            container.Register<ICategoryRepository, CategoryRepository>(Lifestyle.Scoped);
+            container.Register<IPortifolioRepository, PortifolioRepository>(Lifestyle.Scoped);
 
-            //// Domain
-            //container.Register<IClienteService, ClienteService>(Lifestyle.Scoped);
-
-            //// Infra Dados
-            //container.Register<IClienteRepository, ClienteRepository>(Lifestyle.Scoped);
-            //container.Register<IEnderecoRepository, EnderecoRepository>(Lifestyle.Scoped);
-            //container.Register<IUnitOfWork, UnitOfWork>(Lifestyle.Scoped);
-            //container.Register<CrudModalDDDContext>(Lifestyle.Scoped);
-            ////container.Register(typeof (IRepository<>), typeof (Repository<>));
-
-            //// Logging
-            //container.Register<ILogAuditoria, LogAuditoriaHelper>(Lifestyle.Scoped);
-            //container.Register<LogginContext>(Lifestyle.Scoped);
+            //App
+            container.Register<IBusinessAppService, BusinessAppService>(Lifestyle.Scoped);
+            container.Register<ICategoryAppService, CategoryAppService>(Lifestyle.Scoped);
+            container.Register<IPortifolioAppService, PortifolioAppService>(Lifestyle.Scoped);
+            
+            //Domain
+            container.Register<IServiceBusiness, BusinessService>(Lifestyle.Scoped);
         }
     }
 }

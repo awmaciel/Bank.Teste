@@ -9,6 +9,6 @@ namespace Bank.Portifolio.Bussines.Domain.Interfaces
         IQueryable<Entities.Business> ListBusinessHighRisk();
         IQueryable<Entities.Business> ListBusinessMediumRisk();
         IQueryable<Entities.Business> ListBusinessLowRisk();
-        IQueryable<Bank.Portifolio.Bussines.Domain.Entities.Business> ListBusiness(IEnumerable<Entities.Business> LstBusiness);
+        IQueryable<Bank.Portifolio.Bussines.Domain.Entities.Business> ListBusiness();
     }
 }

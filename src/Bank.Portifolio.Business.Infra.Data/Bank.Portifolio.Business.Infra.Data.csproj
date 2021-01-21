@@ -66,6 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Sql\Seed\" />
+    <Folder Include="Sql\StoredProcs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

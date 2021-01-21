@@ -1,5 +1,6 @@
 ﻿using Bank.Portifolio.Bussines.Domain.Interfaces;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Bank.Portifolio.Business.Infra.Data.Repository
@@ -8,22 +9,22 @@ namespace Bank.Portifolio.Business.Infra.Data.Repository
     {
         public IQueryable<Bank.Portifolio.Bussines.Domain.Entities.Business> ListBusinessHighRisk()
         {
-            return Db.Businesses.Include("Client").Include("Category").Include("Portifolio").AsNoTracking().Where(x => x.IdCategory == 1);
+            return Db.Business.Include("Client").Include("Category").Include("Portifolio").AsNoTracking().Where(x => x.IdCategory == 1);
         }
 
         public IQueryable<Bank.Portifolio.Bussines.Domain.Entities.Business> ListBusinessMediumRisk()
         {
-            return Db.Businesses.Include("Client").Include("Category").Include("Portifolio").AsNoTracking().Where(x => x.IdCategory == 2);
+            return Db.Business.Include("Client").Include("Category").Include("Portifolio").AsNoTracking().Where(x => x.IdCategory == 2);
         }
 
         public IQueryable<Bank.Portifolio.Bussines.Domain.Entities.Business> ListBusinessLowRisk()
         {
-            return Db.Businesses.Include("Client").Include("Category").Include("Portifolio").AsNoTracking().Where(x => x.IdCategory == 3);
+            return Db.Business.Include("Client").Include("Category").Include("Portifolio").AsNoTracking().Where(x => x.IdCategory == 3);
         }
 
-        public IQueryable<Bank.Portifolio.Bussines.Domain.Entities.Business> ListBusiness(IEnumerable<Bank.Portifolio.Bussines.Domain.Entities.Business> LstBusiness)
+        public IQueryable<Bank.Portifolio.Bussines.Domain.Entities.Business> ListBusiness()
         {
-            return Db.Businesses.Include("Client").Include("Category").Include("Portifolio").AsNoTracking();
+            return  Db.Business.Include("Client").Include("Category").Include("Portifolio").AsNoTracking().AsNoTracking();
         }
     }
 }

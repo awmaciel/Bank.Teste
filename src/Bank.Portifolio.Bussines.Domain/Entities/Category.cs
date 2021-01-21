@@ -8,8 +8,8 @@ namespace Bank.Portifolio.Bussines.Domain.Entities
         public int IdCategory { get; set; }
         public string NameCategory { get; set; }
         public DateTime DateRegister { get; set; }
-        public DateTime DateUpdate { get; set; }
+        public DateTime? DateUpdate { get; set; }
 
-        public virtual IEnumerable<Business> BusinessesCategory { get; set; }
+        public virtual ICollection<Business> BusinessesCategory { get; set; }
     }
 }

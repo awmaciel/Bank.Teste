@@ -10,7 +10,7 @@ namespace Bank.Portifolio.Business.Infra.Data.Context
     public class Context : DbContext
     {
         public Context()
-            :base("DefaultConnection")
+            :base("ProjectBankPortifolioBusiness")
         {
                 
         }
@@ -18,7 +18,7 @@ namespace Bank.Portifolio.Business.Infra.Data.Context
         public DbSet<Client> Client { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Bank.Portifolio.Bussines.Domain.Entities.Portifolio> Portifolios { get; set; }
-        public DbSet<Bank.Portifolio.Bussines.Domain.Entities.Business> Businesses { get; set; }
+        public DbSet<Bank.Portifolio.Bussines.Domain.Entities.Business> Business { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

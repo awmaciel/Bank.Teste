@@ -22,6 +22,9 @@ namespace Bank.Portifolio.Business.Application.ViewModels
         [MinLength(5, ErrorMessage = "Mínimo {0} caracteres")]
         public string TypeBusiness { get; set; }
 
+        [Required(ErrorMessage = "Preencha o campo Valor")]
+        public decimal ValueBusiness { get; set; }
+
         [ScaffoldColumn(false)]
         public DateTime DateRegister { get; set; }
 

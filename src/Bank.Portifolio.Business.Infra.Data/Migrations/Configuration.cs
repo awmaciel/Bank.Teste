@@ -3,6 +3,7 @@
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.IO;
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Bank.Portifolio.Business.Infra.Data.Context.Context>
@@ -14,10 +15,18 @@
 
         protected override void Seed(Bank.Portifolio.Business.Infra.Data.Context.Context context)
         {
-            //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+            // Delete all stored procs, views
+            foreach (var file in Directory.GetFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug", ""), "Sql\\Seed"), "*.sql"))
+            {
+                context.Database.ExecuteSqlCommand(File.ReadAllText(file), new object[0]);
+            }
+
+            // Add Stored Procedures
+            foreach (var file in Directory.GetFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug", ""), "Sql\\StoredProcs"), "*.sql"))
+            {
+                context.Database.ExecuteSqlCommand(File.ReadAllText(file), new object[0]);
+            }
         }
     }
 }
