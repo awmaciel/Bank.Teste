@@ -18,15 +18,21 @@
     </div>
     <div class="form-group">
         <h4 class="control-label col-md-2">Clients</h4>
-        <div class="col-md-2">
-            @Html.DropDownList("Clients", (IEnumerable<SelectListItem>)ViewBag.Clients, new { id = "ddlClients", @class = "form-control" })
+        <div class="col-md-3">
+            @Html.DropDownList("Clients", (IEnumerable<SelectListItem>)ViewBag.Clients, "Please select", htmlAttributes: new { @id = "ddlClients", @class = "form-control", required = "required" })
+
+            @*@Html.DropDownListFor(e => e.IdClient, ViewBag.Clients as IEnumerable<SelectListItem>, "Please select", htmlAttributes: new { @id = "ddlClients", @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(e => e.IdClient, "", new { @class = "text-danger" })*@
         </div>
     </div>
 
     <div class="form-group">
         <h4 class="control-label col-md-2">Portifolio</h4>
         <div class="col-md-2">
-            @Html.DropDownList("Portifolio", (IEnumerable<SelectListItem>)ViewBag.Protifolio, new { id = "ddlPortifolio", @class = "form-control" })
+            @Html.DropDownList("Portifolio", (IEnumerable<SelectListItem>)ViewBag.Protifolio, "Please select", htmlAttributes: new { @id = "ddlPortifolio", @class = "form-control", required = "required" })
+
+            @*@Html.DropDownListFor(e => e.IdPortifolio, ViewBag.Protifolio as IEnumerable<SelectListItem>, "Please select", htmlAttributes: new { @id = "ddlPortifolio", @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(e => e.IdPortifolio, "", new { @class = "text-danger" })*@
         </div>
     </div>
     <div class="form-group">
