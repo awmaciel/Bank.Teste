@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Bank.Portifolio.Bussines.Domain.Dto.TradeCategories>
-
+<br /><br /><br />
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Business", "Create")
 </p>
 <table class="table">
     <tr>
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.NameCategory)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Index", new { /* id=item.PrimaryKey */ }, new { onclick = "return confirm('not implemented')" }) |
+            @Html.ActionLink("Details", "Index", new { /* id=item.PrimaryKey */ }, new { onclick = "return confirm('not implemented?')" }) |
+            @Html.ActionLink("Delete", "Index", new { /* id=item.PrimaryKey */ }, new { onclick = "return confirm('not implemented')" })
         </td>
     </tr>
 }
